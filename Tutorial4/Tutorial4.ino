@@ -20,20 +20,25 @@ void loop() {
 }
 
 void redTweaks() {
-  for(int i=0; i<3; i++) {
-    Serial.println(i);
+  Serial.print("Red LED is blinking: ");
+  for(int i=0; i<4; i++) {
+    Serial.print(i);
     digitalWrite(redLED, HIGH);
     delay(onTime);
     digitalWrite(redLED, LOW);
     delay(offTime);  
-  } 
+  }
+ Serial.println(" "); 
 }
 
 void yellowTweaks() {
-  for (int i = 0; i<3; i++){
+  Serial.print("Yellow LED is blinking: ");
+  for (int i = 0; i<4; i++){
+    Serial.print(i);
     digitalWrite(yellowLED, HIGH);
     delay(onTime);
     digitalWrite(yellowLED, LOW);
     delay(offTime);
   }
+   Serial.println(" ");
 }
