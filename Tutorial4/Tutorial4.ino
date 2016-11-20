@@ -6,6 +6,8 @@ int onTime = 200;
 int offTime = 200;
 
 void setup() {
+
+  Serial.begin(9600);
   pinMode(redLED, OUTPUT);
   pinMode(yellowLED, OUTPUT);
 }
@@ -19,6 +21,7 @@ void loop() {
 
 void redTweaks() {
   for(int i=0; i<3; i++) {
+    Serial.println(i);
     digitalWrite(redLED, HIGH);
     delay(onTime);
     digitalWrite(redLED, LOW);
